@@ -2,7 +2,7 @@
 
 Objective: I wanted to create the logic to play a game of War using OOP principles in Java. 
 
-Ways I build the game:
+How I built the game:
 I created an abstract Card.class that the Heart, Spade, Diamond, and Clubs classes inherit. This allowed me to create a polymorphic List<Card> to model a deck of cards that could include all 52 standard cards from the 4 suit classes. 
   
 Using a CSV file, a DeckBuilder class reads the cards into the program using the Scanner class and builds the Card objects, adding them to the main deck. The deck is shuffled using the Collections.shuffle method.
