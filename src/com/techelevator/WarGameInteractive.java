@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
-public class War {
+public class WarGameInteractive {
 
 	// instance variables
 	List<Card> playerDeck;
@@ -46,6 +46,7 @@ public class War {
 			for (int i = 0; i < smallestDeck; i++) {
 				
 				System.out.println("Battle:" + (i+1));
+				hitReturn.nextLine();
 				Object playerTopCardValue = playerDeck.get(i).getRank();
 				Object computerTopCardValue = computerDeck.get(i).getRank();
 				iValue = i;
@@ -92,8 +93,8 @@ public class War {
 						warWinDeck.add(computerDeck.get(i+3));
 						warWinDeck.add(computerDeck.get(i+4));
 
-						System.out.println("Are you ready for the final card?" + "\n");
-
+						System.out.println("Are you ready for the final card?");
+						hitReturn.nextLine();
 						if (playerWarCard > computerWarCard) {
 							playerScore++;
 							System.out.println("Player wins the WAR with " + playerDeck.get(i+4).getCardName());
@@ -191,8 +192,8 @@ public class War {
 						warWinDeck.add(computerDeck.get(i+2));
 						warWinDeck.add(computerDeck.get(i+3));
 
-						System.out.println("Are you ready for the final card?" + "\n");
-
+						System.out.println("Are you ready for the final card?");
+						hitReturn.nextLine();
 						if (playerWarCard > computerWarCard) {
 							playerScore++;
 							System.out.println("Player wins the WAR with " + playerDeck.get(i+3).getCardName());
@@ -282,8 +283,8 @@ public class War {
 						warWinDeck.add(computerDeck.get(i+1));
 						warWinDeck.add(computerDeck.get(i+2));
 
-						System.out.println("Are you ready for the final card?" + "\n");
-
+						System.out.println("Are you ready for the final card?");
+						hitReturn.nextLine();
 						if (playerWarCard > computerWarCard) {
 							playerScore++;
 							System.out.println("Player wins the WAR with " + playerDeck.get(i+2).getCardName());
@@ -364,8 +365,8 @@ public class War {
 						warWinDeck.add(computerDeck.get(i));
 						warWinDeck.add(computerDeck.get(i+1));
 
-						System.out.println("Are you ready for the final card?" + "\n");
-
+						System.out.println("Are you ready for the final card?");
+						hitReturn.nextLine();
 						if (playerWarCard > computerWarCard) {
 							playerScore++;
 							System.out.println("Player wins the WAR with " + playerDeck.get(i+1).getCardName());
@@ -492,7 +493,7 @@ public class War {
 				for (int k = 0 ; k < warWinDeck.size(); k++) {
 					if (k % 2 == 0) {
 						playerWinDeck.add(warWinDeck.get(k));
-					} else {
+					} else { 
 						computerWinDeck.add(warWinDeck.get(k));
 					}
 				}
@@ -500,7 +501,7 @@ public class War {
 			warWinDeck = new ArrayList<>();
 			doublewarRetreat=false;
 			rounds++;
-			
+
 			List<Card> playerTransfer = new ArrayList<>();
 			List<Card> computerTransfer = new ArrayList<>();
 
@@ -529,17 +530,8 @@ public class War {
 			System.out.println();
 			Collections.shuffle(playerDeck);
 			Collections.shuffle(computerDeck);
-		} 
-		if (playerDeck.size() > 0) {
-			System.out.println("PLAYER has won the WAR!\n");
-		} else {
-			System.out.println("COMPUTER has won the WAR!\n");
-		}
-		System.out.println("This WAR game took " + turns + " battles!" );
+		} System.out.println("This game took " + turns + " battles!" );
 	}
-
-
-	// HELPER METHODS
 
 	public void makeTwoWarDecks(List<Card> shuffledDeck) {
 		playerDeck = new ArrayList<>();
@@ -555,20 +547,5 @@ public class War {
 			}
 		}
 	}
-
-//	public List<Card> getPlayerDeck() {
-//		return playerDeck;
-//	}
-
-//	public List<Card> getComputerDeck() {
-//		return computerDeck;
-//	}
-//
-//	public void showDeck(List<Card> deckToShow) {
-//		for (Card thisCard : deckToShow) {
-//			System.out.println(thisCard.getName() + ", " + thisCard.getSuit() + " Quantity: " + thisCard.getQuantity());
-//		}
-//	}
-
-
+	
 }

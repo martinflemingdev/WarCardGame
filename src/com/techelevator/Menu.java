@@ -1,4 +1,4 @@
-package com.techelevator.view;
+package com.techelevator;
 
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -13,6 +13,19 @@ public class Menu {
 	public Menu(InputStream input, OutputStream output) {
 		this.out = new PrintWriter(output);
 		this.in = new Scanner(input);
+	}
+	
+	public void displayTitleScreen() {
+		System.out.println("*********************************");
+		System.out.println("*   WECLOME TO THE GAME OF...   *");
+		System.out.println("* __          __     _____  _   *\r\n" + 
+				"* \\ \\        / /\\   |  __ \\| |  *\r\n" + 
+				"*  \\ \\  /\\  / /  \\  | |__) | |  *\r\n" + 
+				"*   \\ \\/  \\/ / /\\ \\ |  _  /| |  *\r\n" + 
+				"*    \\  /\\  / ____ \\| | \\ \\|_|  *\r\n" + 
+				"*     \\/  \\/_/    \\_\\_|  \\_(_)  *");
+		System.out.println("*                               *");
+		System.out.println("*********************************");
 	}
 
 	public Object getChoiceFromOptions(Object[] options) {

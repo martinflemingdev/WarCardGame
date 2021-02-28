@@ -7,7 +7,7 @@ public abstract class Card {
 	private int rank;
 	private String name;
 	private boolean faceUp;
-	private final int QUANTITY;
+	private int quantity;
 	
 //	getters
 	
@@ -30,11 +30,11 @@ public abstract class Card {
 	}
 	
 	public int getQuantity() {
-		return QUANTITY;
+		return quantity;
 	}
 	
 	public String getCardName() {
-		String cardName = getName() + " of " + getSuit();
+		String cardName = "the " + getName() + " of " + getSuit();
 		return cardName;
 	}
 	
@@ -44,7 +44,7 @@ public abstract class Card {
 		this.rank = rank;
 		this.name = name;
 		this.faceUp = false;
-		this.QUANTITY =1;
+		this.quantity =1;
 	}
 	
 	

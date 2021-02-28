@@ -1,7 +1,5 @@
 package com.techelevator;
 
-import com.techelevator.view.Menu;
-
 public class CardGamesCLI {
 
 //	instance vars
@@ -26,8 +24,8 @@ public class CardGamesCLI {
 
 	public void run() {
 		
-		deckBuilder.buildListOfCards();
-		deckBuilder.deckBuilder();
+		deckBuilder.readFileForCards();
+		deckBuilder.createDeckOfCards();
 	
 		while (true) {
 			String choice = (String) menu.getChoiceFromOptions(MAIN_MENU_OPTIONS);
