@@ -1,0 +1,2 @@
+module WarCardGame {
+}

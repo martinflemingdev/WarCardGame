@@ -1,4 +1,4 @@
-package com.techelevator;
+package wargame;
 
 public abstract class Card {
 	

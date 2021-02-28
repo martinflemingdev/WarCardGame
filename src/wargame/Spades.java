@@ -1,4 +1,4 @@
-package com.techelevator;
+package wargame;
 
 public class Spades extends Card{
 
