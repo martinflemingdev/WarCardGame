@@ -537,9 +537,7 @@ public class War {
 		}
 		System.out.println("This WAR game took " + turns + " battles!" );
 	}
-
-
-	// HELPER METHODS
+	
 
 	public void makeTwoWarDecks(List<Card> shuffledDeck) {
 		playerDeck = new ArrayList<>();
@@ -555,20 +553,4 @@ public class War {
 			}
 		}
 	}
-
-//	public List<Card> getPlayerDeck() {
-//		return playerDeck;
-//	}
-
-//	public List<Card> getComputerDeck() {
-//		return computerDeck;
-//	}
-//
-//	public void showDeck(List<Card> deckToShow) {
-//		for (Card thisCard : deckToShow) {
-//			System.out.println(thisCard.getName() + ", " + thisCard.getSuit() + " Quantity: " + thisCard.getQuantity());
-//		}
-//	}
-
-
 }
