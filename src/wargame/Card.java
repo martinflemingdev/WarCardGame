@@ -11,8 +11,6 @@ public abstract class Card {
 	
 //	getters
 	
-//	one more method which is abstract to play a "sound" for every suit 
-	
 	public String getSuit() {
 		return suit;
 	}
@@ -44,8 +42,6 @@ public abstract class Card {
 		this.rank = rank;
 		this.name = name;
 		this.faceUp = false;
-		this.quantity =1;
+		this.quantity = 1;
 	}
-	
-	
 }

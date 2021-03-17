@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 public class DeckBuilder {
 
-	//instance vars
+	//instance variables
 	List <String []> listOfCards = new ArrayList<>(); 
 	List <Card> deck = new ArrayList<>();
 
@@ -19,18 +19,12 @@ public class DeckBuilder {
 
 	// Methods
 
-	public List<Card> getDeck() {
-		return deck;
-	}
-
-
 	public List <String []> readFileForCards() {
 		try(Scanner FileScanner = new Scanner(cardDeckFile))
 		{
 			while (FileScanner.hasNextLine()) {
 				String line = FileScanner.nextLine();
 				String [] cards = line.split("\\|");
-				//('2', 'clubs')
 				listOfCards.add(cards);
 			}
 		} catch (FileNotFoundException e) {
@@ -39,13 +33,9 @@ public class DeckBuilder {
 		return listOfCards;
 	}
 
-
-	public void displayListOfCardsAsStringArrays() {
-		for (String[] card : listOfCards) {
-			System.out.println(Arrays.toString(card));
-		}
+	public List<Card> getDeck() {
+		return deck;
 	}
-
 
 	public void displayDeck() {
 		for (Card thisCard : deck) {
@@ -53,11 +43,9 @@ public class DeckBuilder {
 		}
 	}
 
-
 	public void shuffleDeck() {
 		Collections.shuffle(deck);
 	}
-
 
 	public List <Card> createDeckOfCards(){
 		for (String[] listElement : listOfCards) {
