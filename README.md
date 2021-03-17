@@ -1,6 +1,6 @@
 # WarCardGame
 
-Objective: I wanted to create the logic to play a game of War using OOP principles in Java. 
+Objective: I wanted to create the logic and objects to play a game of War using OOP principles in Java. 
 
 ## How I built the game:
 * I created an abstract Card.class that the Heart, Spade, Diamond, and Clubs classes inherit. 
