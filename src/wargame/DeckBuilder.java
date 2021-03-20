@@ -11,11 +11,11 @@ import java.util.Scanner;
 public class DeckBuilder {
 
 	//instance variables
-	List <String []> listOfCards = new ArrayList<>(); 
-	List <Card> deck = new ArrayList<>();
+	private List <String []> listOfCards = new ArrayList<>(); 
+	private List <Card> deck = new ArrayList<>();
 
-	String filePath = "cardDeck.csv";
-	File cardDeckFile = new File (filePath);
+	private String filePath = "cardDeck.csv";
+	private File cardDeckFile = new File (filePath);
 
 	// Methods
 
