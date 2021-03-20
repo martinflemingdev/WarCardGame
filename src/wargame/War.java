@@ -8,26 +8,26 @@ import java.util.Scanner;
 public class War {
 
 	// instance variables
-	List<Card> playerDeck;
-	List<Card> computerDeck;
-	List<Card> playerWinDeck;
-	List<Card> computerWinDeck;
-	List<Card> warWinDeck;
+	private List<Card> playerDeck;
+	private List<Card> computerDeck;
+	private List<Card> playerWinDeck;
+	private List<Card> computerWinDeck;
+	private List<Card> warWinDeck;
 
-	int playerScore;
-	int computerScore;
-	int smallestDeck;
+	private int playerScore;
+	private int computerScore;
+	private int smallestDeck;
 
-	int turns;
-	int iValue;
-	int rounds;
+	private int turns;
+	private int iValue;
+	private int rounds;
 
-	int wars;
-	int doubleWars;
-	boolean doublewar;
-	boolean doublewarRetreat;
+	private int wars;
+	private int doubleWars;
+	private boolean doublewar;
+	private boolean doublewarRetreat;
 
-	Scanner hitReturn = new Scanner(System.in);
+	private Scanner hitReturn = new Scanner(System.in);
 
 	public void playWar() {
 
